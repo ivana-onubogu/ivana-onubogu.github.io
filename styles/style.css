@@ -44,7 +44,36 @@ button:hover{
 .contact-button{
 	width: 220px;
 }
+/* USER VIDEO INPUT */
+#main_main-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around; 
+	height: 100px;
+}
 
+#main_video{
+	max-width: 300px;
+}
+
+#main_video-button{
+	background-color: red;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size:.75em;
+	transition-property: box-shadow;
+	transition-duration: .3s;
+}
+#main_video-button:hover {
+	cursor: pointer;
+	box-shadow: gold 0 0 5px 5px;
+	transition-property: box-shadow;
+	transition-duration: .3s;
+}
 /* OFF-CANVAS MENU */
 #Menu{
 	width: 300px;
