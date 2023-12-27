@@ -1,6 +1,6 @@
 // GLOBAL VARIABLES
 let		particles = [];
-const	number_of_particles = 10000;
+const	number_of_particles = 15000;
 
 let		noiseScale;
 let		noiseScaleDefault = 0.007;
@@ -55,22 +55,8 @@ function setup()
 	speed = speedDefault;
 	clear();
 }
-if(typeof RecordRTC_Extension === 'undefined') {
-    alert('RecordRTC chrome extension is either disabled or not installed.');
-}
-
-var recorder = new RecordRTC_Extension();
-recorder.startRecording(recorder.getSupoortedFormats()[7], function() {
-    setTimeout(function() {
-        recorder.stopRecording(function(blob) {
-            console.log(blob.size, blob);
-            var url = URL.createObjectURL(blob);
-            video.src = url;
-        });
-    }, 3000);
-});
 // USER RECORDING
-/*const videoButton = document.getElementById('main__video-button');
+const videoButton = document.getElementById('main__video-button');
 const video = document.getElementById('main__video');
 
 let mediaRecorder;
@@ -130,13 +116,13 @@ function stopRecording() {
 }
 
 init();
-*/
+
 // DRAWING THE FLOW FIELD
 function draw()
 {
 	fill_background();
 
-	for(let i = 3000; i < number_of_particles; i++) 
+	for(let i = 11111; i < number_of_particles; i++) 
 	{
 		let particle = particles[i];
 		
