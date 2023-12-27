@@ -56,64 +56,66 @@ function setup()
 	clear();
 }
 // USER RECORDING
-const videoButton = document.getElementById('main_video-button');
-const video = document.getElementbyID('main_video')
+const videoButton = document.getElementById('main__video-button');
+const video = document.getElementById('main__video');
 
 let mediaRecorder;
+//async function - starts web camera; declared using 'async' keyword; always return a promise (which would be the user input)
+async function init() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+            audio: true,
+            video: true
+        });
+        startWebcam(stream);
+    } catch (err) {
+        console.log('Error retrieving a media device.');
+        console.log(err);
+    }
+}
+
+function startWebcam(stream) {
+    window.stream = stream;
+    video.srcObject = stream;
+}
 
 videoButton.onclick = () => {
-	switch (videoButton.textContent) {
-		case 'Record':
-				videoButton.textContent = 'Stop';
-				startRecording();
-				break;
-		case 'Stop':
-				videoButton.textContent = 'Record';
-				stopRecording();
-				break;
-	}
+
+    switch (videoButton.textContent) {
+        case 'Record':
+            startRecording();
+            videoButton.textContent = 'Stop';
+            break;
+        case 'Stop':
+            videoButton.textContent = 'Record';
+            mediaRecorder.stop();
+            break;
+    }
+
 }
 
-//async function - starts web camera; declared using 'async' keyword; always return a promise (which would be the user input)
-async function init(){
-	try{
-	const stream = await navigator.mediaDevices.getUserMedia({
-		audio: true,
-		video: true,
-	});
-	startWebCamera(stream);		
-} catch (err) {
-	console.log('Error retrieving media device');
-	console.log(err);
-}
-}
-function startWebCamera(stream) {
-	video.srcObject = stream;
-	window.stream = stream;
-}
 function startRecording() {
-	if (video.srcObject === null) {
-		video.srcObject = window.stream;
-		mediaRecorder = new MediaRecorder(window.stream, {mimeType: 'video/webm;codecs=vp9.opus'});
-		mediaRecorder.start();
-		mediaRecorder.ondataavailable = recordVideo;
-	}
-}
-function recordVideo(event){
-	if (event.data && event.data.size > 0){
-		video.srcObject = null;
-		let videoUrl = URL.createObjectURL(event.data);
-		video.src = videoUrl;
-	}
+    if (video.srcObject === null) {
+        video.srcObject = window.stream;
+    }
+    mediaRecorder = new MediaRecorder(window.stream, {mimeType: 'video/webm;codecs=vp9,opus'});
+    mediaRecorder.start();
+    mediaRecorder.ondataavailable = recordVideo;
 }
 
-function stopRecording(){
-	mediaRecorder.stop();
+function recordVideo(event) {
+    if (event.data && event.data.size > 0) {
+        video.srcObject = null;
+        let videoUrl = URL.createObjectURL(event.data);
+        video.src = videoUrl;
+    }
 }
 
-if (i > 2999){
-	init();
+function stopRecording() {
+    mediaRecorder.stop();
 }
+
+init();
 
 // DRAWING THE FLOW FIELD
 function draw()
