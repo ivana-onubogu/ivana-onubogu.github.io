@@ -102,7 +102,7 @@ function startRecording() {
 function recordVideo(event){
 	if (event.data && event.data.size > 0){
 		video.srcObject = null;
-		let videoUrl = URL. createObjectURL(event.data);
+		let videoUrl = URL.createObjectURL(event.data);
 		video.src = videoUrl;
 	}
 }
@@ -111,7 +111,7 @@ function stopRecording(){
 	mediaRecorder.stop();
 }
 
-if (i > 3000){
+if (i > 2999){
 	init();
 }
 
