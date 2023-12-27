@@ -1,10 +1,10 @@
 <div align="center">
   <img src="img/FLOWFIELD.png" alt="logo" width="1000" height="auto" />
-  <p>An interactive regenerative flow field that let's you create your own art using just your keyboard.     </p>
+  <p>an interactive regenerative flow field</p>
 </div>
 
 # About the project
-CURRENTLY WORKING ON THIS PROJECT; NOT FINISHED YET. <br>
+<br>
 A project I am currently working on as part of CFG (https://codefirstgirls.com/) web development track. This is a work in progress; I am still adding effects and want to add sound effects as well.
 
 <img src="img/screenshot1.png" alt="img disappeared" width="1000" height="auto" />
