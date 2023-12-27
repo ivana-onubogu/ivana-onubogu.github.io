@@ -44,7 +44,7 @@ button:hover{
 .contact-button{
 	width: 220px;
 }
-/* USER VIDEO INPUT */
+/* USER VIDEO INPUT 
 #main_main-container{
 	display: flex;
 	flex-direction: column;
@@ -56,7 +56,7 @@ button:hover{
 #main_video{
 	max-width: 300px;
 	position: absolute;
-}
+}*/
 
 #main_video-button{
 	background-color: white;
