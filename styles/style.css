@@ -51,15 +51,13 @@ button:hover{
 #startRecord, #stopRecord{
 	background-color: red;
 	position: fixed;
-	height: 80px;
-	width: 80px;
-    top: 90px;
-    right: 10px;
+	top: 15px;
+	right: 10px;
 	text: black;
-	border-radius: 70%;
+	border-radius: 50%;
 	text-align: center;
-	line-height: 50px;
-	font-size:.75em;
+	line-height: 12px;
+	font-size: 0.3em;
 	transition-property: box-shadow;
 	transition-duration: .3s;
 }
