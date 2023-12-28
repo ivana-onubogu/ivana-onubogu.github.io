@@ -56,66 +56,40 @@ function setup()
 	clear();
 }*/
 // USER RECORDING
-const videoButton = document.getElementById('main__video-button');
-const video = document.getElementById('main__video');
+	var video = document.querySelector("#video");
+      var startRecord = document.querySelector("#startRecord");
+      var stopRecord = document.querySelector("#stopRecord");
+      var downloadLink = document.querySelector("#downloadLink");
 
-let mediaRecorder;
-//async function - starts web camera; declared using 'async' keyword; always return a promise (which would be the user input)
-async function init() {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-            audio: true,
-            video: true
-        });
-        startWebcam(stream);
-    } catch (err) {
-        console.log('Error retrieving a media device.');
-        console.log(err);
-    }
-}
+      window.onload = async function(){
+        stopRecord.style.display = "none";
 
-function startWebcam(stream) {
-    window.stream = stream;
-    video.srcObject = stream;
-}
+        videoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+        video.srcObject = videoStream;
+      }
 
-videoButton.onclick = () => {
+      startRecord.onclick = function(){
+        startRecord.style.display = "none";
+        stopRecord.style.display = "inline";
 
-    switch (videoButton.textContent) {
-        case 'Record':
-            startRecording();
-            videoButton.textContent = 'Stop';
-            break;
-        case 'Stop':
-            videoButton.textContent = 'Record';
-            mediaRecorder.stop();
-            break;
-    }
+        mediaRecorder = new MediaRecorder(videoStream);
 
-}
+        let blob = [];
+        mediaRecorder.addEventListener('dataavailable', function(e){
+          blob.push(e.data);
+        })
 
-function startRecording() {
-    if (video.srcObject === null) {
-        video.srcObject = window.stream;
-    }
-    mediaRecorder = new MediaRecorder(window.stream, {mimeType: 'video/webm;codecs=vp9,opus'});
-    mediaRecorder.start();
-    mediaRecorder.ondataavailable = recordVideo;
-}
+        mediaRecorder.addEventListener('stop', function(){
+          var videoLocal = URL.createObjectURL(new Blob (blob));
+          downloadLink.href = videoLocal;
+        })
 
-function recordVideo(event) {
-    if (event.data && event.data.size > 0) {
-        video.srcObject = null;
-        let videoUrl = URL.createObjectURL(event.data);
-        video.src = videoUrl;
-    }
-}
+        mediaRecorder.start();
+      }
 
-function stopRecording() {
-    mediaRecorder.stop();
-}
-
-init();
+      stopRecord.onclick = function(){
+        mediaRecorder.stop();
+      }
 
 /*/ DRAWING THE FLOW FIELD
 function draw()
