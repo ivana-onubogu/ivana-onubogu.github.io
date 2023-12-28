@@ -1,4 +1,4 @@
-// GLOBAL VARIABLES
+/*/ GLOBAL VARIABLES
 let		particles = [];
 const	number_of_particles = 15000;
 
@@ -54,7 +54,7 @@ function setup()
 	color5 = color(228, 208, 10);
 	speed = speedDefault;
 	clear();
-}
+}*/
 // USER RECORDING
 const videoButton = document.getElementById('main__video-button');
 const video = document.getElementById('main__video');
@@ -117,7 +117,7 @@ function stopRecording() {
 
 init();
 
-// DRAWING THE FLOW FIELD
+/*/ DRAWING THE FLOW FIELD
 function draw()
 {
 	fill_background();
@@ -514,4 +514,4 @@ function revertW()
 {
 	w_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
-}
+}*/
