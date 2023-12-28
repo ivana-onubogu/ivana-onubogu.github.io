@@ -48,8 +48,8 @@ button:hover{
 #startRecord, #stopRecord{
 	background-color: rgb(248, 51, 60);
 	position: fixed;
-	top: 15px;
-	right: 10px;
+	top: 30px;
+	right: 20px;
 	text: black;
 	border-radius: 50%;
 	text-align: center;
