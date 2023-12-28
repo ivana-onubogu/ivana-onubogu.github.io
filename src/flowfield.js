@@ -80,13 +80,14 @@ function draw()
 }
 // USER RECORDING
 var video = document.querySelector("#video");
+var videoContainer = document.querySelector("video-container");
 var startRecord = document.querySelector("#startRecord");
 var stopRecord = document.querySelector("#stopRecord");
 var downloadLink = document.querySelector("#downloadLink");
 
 window.onload = async function(){
   stopRecord.style.display = "none";
-
+	videoContainer.parent("canvas.location");
   videoStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
   video.srcObject = videoStream;
 }
