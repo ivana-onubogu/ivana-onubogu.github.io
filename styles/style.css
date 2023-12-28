@@ -43,25 +43,12 @@ button:hover{
 
 .contact-button{
 	width: 220px;
-}*/
-/*USER VIDEO INPUT */
-#main_main-container{
-	display: flex;
-	position: fixed;
-	top: 20px;
-	right: 30px;
-	/*flex-direction: column;*/
-	align-items: center;
-	justify-content: space-around; 
-	height: 100vh;
 }
-
-#main_video{
-	max-width: 300px;
-	position: absolute;
-}*/
-
-#main_video-button{
+/*USER VIDEO INPUT */
+#video-container{
+	position: fixed;
+}
+#startRecord{
 	background-color: red;
 	position: fixed;
 	height: 40px;
@@ -74,9 +61,26 @@ button:hover{
 	line-height: 50px;
 	font-size:.75em;
 	transition-property: box-shadow;
-	transition-duration: .3s;*/
+	transition-duration: .3s;
 }
-#main_video-button:hover {
+
+#stopRecord{
+	background-color: red;
+	position: fixed;
+	height: 40px;
+	width: 40px;
+    top: 90px;
+    left: 10px;
+	text: black;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 50px;
+	font-size:.75em;
+	transition-property: box-shadow;
+	transition-duration: .3s;
+}
+
+#startRecord:hover {
 	background-color: rgb(188, 251, 61);
 	padding: 2px;
 }
