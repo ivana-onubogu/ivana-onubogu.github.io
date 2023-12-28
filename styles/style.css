@@ -1,8 +1,8 @@
-/* GLOBAL STUFF */
+/* GLOBAL STUFF 
 body{
 	height: 100vh;
 	margin:0%;
-	background-color: white;
+	background-color: black;
 	font-weight:lighter;
 	font-family: Helvetica !important;
 	color: greenyellow !important;
@@ -12,7 +12,7 @@ p{
 	display: block;
 }
 
-/* ALL BUTTONS */
+/* ALL BUTTONS */ /*
 button{
 	background-color: rgb(188, 251, 61);
 	padding: 20px;
@@ -43,7 +43,7 @@ button:hover{
 
 .contact-button{
 	width: 220px;
-}
+}*/
 /*USER VIDEO INPUT */
 #main_main-container{
 	display: flex;
@@ -87,7 +87,7 @@ button:hover{
 
 .offcanvas-body
 {
-	background-color: white;
+	background-color: black;
 	color:rgb(173, 255, 47);
 }
 
