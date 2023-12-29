@@ -54,17 +54,7 @@ function setup()
 	color5 = color(random(100, 255), random(100, 200), random(100, 255));
 	speed = speedDefault;
 	clear();
-//SET-UP AUDIO-REACTIVE PARTICLES
-	mic = new p5.AudioIn(); //setup mic object
-	mic.start(); //startmic
-	fft = new p5.FFT(fft_smoother, band_cnt); // initializes fast fourier transform analysis
-	fft.setInput(mic); //connect mic to fft transform
-	w = width;
-	h - height;
-
-	initParticles();
-}
-
+	
 // DRAWING THE FLOW FIELD
 function draw()
 {
