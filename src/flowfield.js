@@ -8,7 +8,7 @@ let		noiseScaleEffect = 0.0009;
 let 	direction;
 let		directionEffect = 4;
 let		speed;
-let		speedDefault = 1.1;
+let		speedDefault = 1.2;
 let		speedEffect = 2;
 let		strokeWeightDefault = 1;
 let		strokeWeightEffect = 1;
@@ -51,10 +51,10 @@ function setup()
 	color2 = color(173, 255, 47);
 	color3 = color(248, 51, 60); 
 	color4 = color(43, 158, 179);
-	color5 = color(random(100, 255), random(100, 200), random(100, 255));
+	color5 = color(228, 208, 10);
 	speed = speedDefault;
 	clear();
-}	
+}
 // DRAWING THE FLOW FIELD
 function draw()
 {
@@ -153,7 +153,7 @@ function select_default_color(i)
 	else
 		return (color4);
 }
-// increases stoke weight
+// increases stroke weight
 function get_stroke_weight()
 {
 	if (w_pressed || e_pressed)
@@ -161,7 +161,7 @@ function get_stroke_weight()
 	else
 		strokeWeight(strokeWeightDefault);
 }
-// changes direction, uses vectors
+// changes direction uses
 function get_particle_direction(particle)
 {
 	if (u_pressed)
