@@ -10,7 +10,7 @@ let		directionEffect = 4;
 let		speed;
 let		speedDefault = 1.2;
 let		speedEffect = 2;
-let		strokeWeightDefault = 1;
+let		strokeWeightDefault = 1.1;
 let		strokeWeightEffect = 1;
 
 let		color1;
@@ -233,7 +233,7 @@ function keyPressed()
 	else if (key == 'c' || key == 'C') 
 	{
 		glitches(75);
-		strokeWeightDefault++;
+		strokeWeightDefault*=strokeWeightDefault++;
 	}
 	else if (key == 'v' || key == 'V') 
 	{
@@ -246,7 +246,7 @@ function keyPressed()
 	}
 	else if (key == 'n' || key == 'N') 
 	{
-	//   do something
+	  	strokeWeightDefault**3;
 	}
 	else if (key == 'm' || key == 'M') 
 	{
