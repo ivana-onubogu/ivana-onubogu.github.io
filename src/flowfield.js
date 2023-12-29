@@ -218,11 +218,14 @@ function keyPressed()
 	if (key == 'z' || key == 'Z') 
 	{
 		z_pressed = true;
-		strokeGrow(25);
+		strokeGrow(90);
 	}
 	else if (key == 'x' || key == 'X') 
 	{
-	//   do something
+		revertSpeed();
+		clearTimeout(previousSpeedTimeout);
+		x_pressed = true;
+		slowDown(41);
 	}
 	else if (key == 'c' || key == 'C') 
 	{
@@ -414,7 +417,7 @@ function strokeGrow(number)
 }
 
 
-/*RESET EFFECT FUNCTIONS
+//RESET EFFECT FUNCTIONS
 
 function revertAll()
 {
@@ -491,4 +494,4 @@ function revertW()
 {
 	w_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
-}*/
+}
