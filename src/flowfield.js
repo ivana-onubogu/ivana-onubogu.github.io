@@ -54,7 +54,7 @@ function setup()
 	color5 = color(random(100, 255), random(100, 200), random(100, 255));
 	speed = speedDefault;
 	clear();
-	
+}	
 // DRAWING THE FLOW FIELD
 function draw()
 {
