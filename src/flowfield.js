@@ -215,10 +215,11 @@ function particle_is_on_screen(particle)
 // VISUAL EFFECTS TRIGGERED BY KEY PRESSES
 function keyPressed() 
 {
-	if (key == 'z' || key == 'Z' && !z_pressed && !w_pressed && !e_pressed)
+	if (key == 'z' || key == 'Z' && !z_pressed)
 	{
 		z_pressed = true;
 		strokeGrow(40);
+		slowDown(0.3);
 	}
 	else if (key == 'x' || key == 'X') 
 	{
@@ -415,10 +416,15 @@ function strokeGrow(number)
 		strokeWeightEffect -= 0.20;
 		setTimeout(() => strokeGrow(number - 0.2), 60);
 	}
+	else if (number > 0 && z_pressed){
+		strokeWeightEffect += 0.3;
+		setTimeout(() => strokeGrow(number - 1), 30);
+	}
 	else if (number <= 0)
 	{
 		revertW();
 		revertE();
+		revertZ();
 	}
 }
 
@@ -437,6 +443,7 @@ function revertAll()
 	revertT();
 	revertU();
 	revertW();
+	revertZ();
 }
 
 function revertSpeed()
@@ -452,6 +459,10 @@ function revertSpeed()
 function revertE()
 {
 	e_pressed = false;
+	strokeWeightEffect = strokeWeightDefault;
+}
+function revertZ(){
+	z_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
 }
 
