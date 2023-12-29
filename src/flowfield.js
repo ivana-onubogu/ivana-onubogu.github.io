@@ -135,7 +135,7 @@ function get_stroke_color(i)
 	else if (a_pressed)
 		stroke(color(random(0,255), random(0,255), random(0,255)));
 	else if (c_pressed)
-		stroke(color 5);
+		stroke(color5);
 	else if (j_pressed)
 		stroke(color2);
 	else if (k_pressed)
