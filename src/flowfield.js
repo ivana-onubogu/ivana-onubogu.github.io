@@ -217,8 +217,6 @@ function keyPressed()
 {
 	if (key == 'z' || key == 'Z')
 	{
-		z_pressed=true;
-		strokeGrow(40);
 		slowDown(0.3);
 	}
 	else if (key == 'x' || key == 'X') 
@@ -247,7 +245,7 @@ function keyPressed()
 	}
 	else if (key == 'm' || key == 'M') 
 	{
-	//   do something
+	 	
 	}
 	else if (key == 'a' || key == 'A') 
 	{
@@ -259,7 +257,7 @@ function keyPressed()
 	}
 	else if (key == 's' || key == 'S') 
 	{
-		background(color2);
+		background(color(random(3, 255), random(240,255), random (110, 155)));
 	}
 	else if (key == 'd' || key == 'D') 
 	{
@@ -268,7 +266,7 @@ function keyPressed()
 	}
 	else if (key == 'f' || key == 'F') 
 	{
-	 	background(color4);
+	 	background(random(3, 255), random(240,255), random (110, 155));
 	}
 	else if (key == 'g' || key == 'G') 
 	{
