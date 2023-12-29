@@ -60,7 +60,7 @@ function draw()
 {
 	fill_background();
 
-	for(let i = 11111; i < number_of_particles; i++) 
+	for(let i = 0; i < number_of_particles; i++) 
 	{
 		let particle = particles[i];
 		
