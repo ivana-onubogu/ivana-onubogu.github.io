@@ -1,6 +1,6 @@
 // GLOBAL VARIABLES
 let		particles = [];
-const	number_of_particles = 15000;
+const	number_of_particles = 5000;
 
 let		noiseScale;
 let		noiseScaleDefault = 0.007;
@@ -215,9 +215,9 @@ function particle_is_on_screen(particle)
 // VISUAL EFFECTS TRIGGERED BY KEY PRESSES
 function keyPressed() 
 {
-	if (key == 'z' || key == 'Z' && !z_pressed)
+	if (key == 'z' || key == 'Z')
 	{
-		z_pressed = true;
+		z_pressed=true;
 		strokeGrow(40);
 		slowDown(0.3);
 	}
@@ -369,7 +369,7 @@ function glitches(number)
 {
 	if (number > 0)
 	{
-		noiseSeed(random(0, 30));
+		noiseSeed(random(0, 75));
 		setTimeout(() => glitches(number - 1), 30);
 	}
 }
@@ -417,7 +417,7 @@ function strokeGrow(number)
 		setTimeout(() => strokeGrow(number - 0.2), 60);
 	}
 	else if (number > 0 && z_pressed){
-		strokeWeightEffect += 0.3;
+		strokeWeightEffect -= 0.3;
 		setTimeout(() => strokeGrow(number - 1), 30);
 	}
 	else if (number <= 0)
