@@ -161,7 +161,7 @@ function get_stroke_weight()
 	else
 		strokeWeight(strokeWeightDefault);
 }
-// changes direction uses
+// changes direction, uses vectors
 function get_particle_direction(particle)
 {
 	if (u_pressed)
@@ -217,7 +217,8 @@ function keyPressed()
 {
 	if (key == 'z' || key == 'Z') 
 	{
-	//	do something
+		z_pressed = true;
+		strokeGrow(25);
 	}
 	else if (key == 'x' || key == 'X') 
 	{
@@ -391,6 +392,10 @@ function strokeGrow(number)
 		strokeWeightEffect += 0.5;
 		setTimeout(() => strokeGrow(number - 1), 30);
 	}
+	else if (number > 80) {
+		strokeWeightEffect += 0.8;
+		setTimeout(() => strokeGrow (number - 1), 30 );
+	}
 	else if (number > 0 && w_pressed)
 	{
 		strokeWeightEffect -= 0.5;
@@ -409,7 +414,7 @@ function strokeGrow(number)
 }
 
 
-// RESET EFFECT FUNCTIONS
+/*RESET EFFECT FUNCTIONS
 
 function revertAll()
 {
@@ -486,4 +491,4 @@ function revertW()
 {
 	w_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
-}
+}*/
