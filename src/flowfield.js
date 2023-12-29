@@ -139,13 +139,13 @@ function get_stroke_color(i)
 	else if (l_pressed)
 		stroke(color4);
 	else if (i_pressed)
-		stroke(color5);
+		stroke(color(random(0,255), random(0,255), random(0,255)));
 	}
 //
 function select_default_color(i)
 {
 	if (i % 5 == 0)
-		return (color1);
+		return (color5);
 	else if (i % 3 == 0)
 		return (color2);
 	else if (i % 2 == 0)
@@ -215,7 +215,7 @@ function particle_is_on_screen(particle)
 // VISUAL EFFECTS TRIGGERED BY KEY PRESSES
 function keyPressed() 
 {
-	if (key == 'z' || key == 'Z' && !z_pressed)
+	if (key == 'z' || key == 'Z' && !z_pressed && !w_pressed && !e_pressed)
 	{
 		z_pressed = true;
 		strokeGrow(40);
@@ -230,6 +230,7 @@ function keyPressed()
 	else if (key == 'c' || key == 'C') 
 	{
 		glitches(50);
+		slowDown(30);
 	}
 	else if (key == 'v' || key == 'V') 
 	{
@@ -261,7 +262,8 @@ function keyPressed()
 	}
 	else if (key == 'd' || key == 'D') 
 	{
-		background(color3);
+		background(color(random(3, 255), random(240,255), random (110, 155)));
+
 	}
 	else if (key == 'f' || key == 'F') 
 	{
@@ -321,7 +323,7 @@ function keyPressed()
 	else if ((key == 'r' || key == 'R') && !r_pressed && !t_pressed) 
 	{
 		r_pressed = true;
-		setTimeout(revertR, effectDuration * 5);
+		setTimeout(revertR, effectDuration * 15);
 	}
 	else if ((key == 't' || key == 'T') && !t_pressed && !r_pressed)
 	{
