@@ -145,13 +145,13 @@ function get_stroke_color(i)
 function select_default_color(i)
 {
 	if (i % 5 == 0)
-		return (color5);
+		return (color(random(100, 255), random(100, 200), random(100, 255)));
 	else if (i % 3 == 0)
-		return (color2);
+		return (color(random(100, 255), random(100, 200), random(100, 255)));
 	else if (i % 2 == 0)
-		return (color3);
+		return (color(random(100, 255), random(100, 200), random(100, 255)));
 	else
-		return (color4);
+		return (color(random(100, 255), random(100, 200), random(100, 255)));
 }
 // increases stroke weight
 function get_stroke_weight()
@@ -245,7 +245,10 @@ function keyPressed()
 	}
 	else if (key == 'm' || key == 'M') 
 	{
-	 	
+		revertSpeed();
+		clearTimeout(previousSpeedTimeout);
+		x_pressed = true;
+		slowDown(90);
 	}
 	else if (key == 'a' || key == 'A') 
 	{
@@ -457,10 +460,6 @@ function revertSpeed()
 function revertE()
 {
 	e_pressed = false;
-	strokeWeightEffect = strokeWeightDefault;
-}
-function revertZ(){
-	z_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
 }
 
