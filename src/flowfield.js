@@ -249,7 +249,11 @@ function keyPressed()
 	}
 	else if (key == 'a' || key == 'A') 
 	{
-		background(color1);
+		background(color(0, 0, 0));
+		revertSpeed();
+		clearTimeout(previousSpeedTimeout);
+		x_pressed = true;
+		slowDown(100);
 	}
 	else if (key == 's' || key == 'S') 
 	{
