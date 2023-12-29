@@ -228,7 +228,7 @@ function keyPressed()
 	}
 	else if (key == 'c' || key == 'C') 
 	{
-		glitches(50);
+		glitches(75);
 	
 	}
 	else if (key == 'v' || key == 'V') 
@@ -237,7 +237,7 @@ function keyPressed()
 	}
 	else if (key == 'b' || key == 'B') 
 	{
-		glitches(10);
+		glitches(-60);
 	
 	}
 	else if (key == 'n' || key == 'N') 
@@ -253,10 +253,9 @@ function keyPressed()
 	}
 	else if (key == 'a' || key == 'A') 
 	{
-		background(color(0, 115, 34));
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
-		x_pressed = true;
+		a_pressed = true;
 		strokeWeightDefault++;
 	}
 	else if (key == 's' || key == 'S') 
@@ -374,6 +373,9 @@ function glitches(number)
 		noiseSeed(random(0, 75));
 		setTimeout(() => glitches(number - 1), 30);
 	}
+	elseif (number < 0)
+		noiseSeed(random(100, 500));
+		setTimeout(() => glitches(number - 1, 60));
 }
 
 function slowDown(number)
