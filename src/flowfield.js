@@ -225,11 +225,12 @@ function keyPressed()
 		clearTimeout(previousSpeedTimeout);
 		x_pressed = true;
 		slowDown(90);
+		strokeWeightDefault+=0.3;
 	}
 	else if (key == 'c' || key == 'C') 
 	{
 		glitches(75);
-	
+		strokeWeightDefault++;
 	}
 	else if (key == 'v' || key == 'V') 
 	{
@@ -238,7 +239,7 @@ function keyPressed()
 	else if (key == 'b' || key == 'B') 
 	{
 		glitches(-60);
-		strokeWeightDefault++
+		strokeWeightDefault++;
 	}
 	else if (key == 'n' || key == 'N') 
 	{
@@ -249,7 +250,7 @@ function keyPressed()
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
 		m_pressed = true;
-		strokeGrow(25);
+		strokeWeightDefault+=0.8;
 	}
 	else if (key == 'a' || key == 'A') 
 	{
