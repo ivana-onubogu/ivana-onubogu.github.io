@@ -51,9 +51,18 @@ function setup()
 	color2 = color(173, 255, 47);
 	color3 = color(248, 51, 60); 
 	color4 = color(43, 158, 179);
-	color5 = color(228, 208, 10);
+	color5 = color(random(100, 255), random(100, 200), random(100, 255));
 	speed = speedDefault;
 	clear();
+//SET-UP AUDIO-REACTIVE PARTICLES
+	mic = new p5.AudioIn(); //setup mic object
+	mic.start(); //startmic
+	fft = new p5.FFT(fft_smoother, band_cnt); // initializes fast fourier transform analysis
+	fft.setInput(mic); //connect mic to fft transform
+	w = width;
+	h - height;
+
+	initParticles();
 }
 
 // DRAWING THE FLOW FIELD
@@ -124,7 +133,7 @@ function fill_background()
 	else
 		background(0, 10);
 }
-
+// changes color
 function get_stroke_color(i)
 {
 	if (speed == speedDefault && !i_pressed)
@@ -142,7 +151,7 @@ function get_stroke_color(i)
 	else if (i_pressed)
 		stroke(color5);
 	}
-
+//
 function select_default_color(i)
 {
 	if (i % 5 == 0)
@@ -154,7 +163,7 @@ function select_default_color(i)
 	else
 		return (color4);
 }
-
+// increases stoke weight
 function get_stroke_weight()
 {
 	if (w_pressed || e_pressed)
@@ -162,7 +171,7 @@ function get_stroke_weight()
 	else
 		strokeWeight(strokeWeightDefault);
 }
-
+// changes direction, uses vectors
 function get_particle_direction(particle)
 {
 	if (u_pressed)
