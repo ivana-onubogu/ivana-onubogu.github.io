@@ -218,7 +218,7 @@ function keyPressed()
 	if (key == 'z' || key == 'Z' && !z_pressed)
 	{
 		z_pressed = true;
-		strokeGrow(90);
+		strokeGrow(40);
 	}
 	else if (key == 'x' || key == 'X') 
 	{
@@ -229,7 +229,7 @@ function keyPressed()
 	}
 	else if (key == 'c' || key == 'C') 
 	{
-		glitches(15);
+		glitches(50);
 	}
 	else if (key == 'v' || key == 'V') 
 	{
