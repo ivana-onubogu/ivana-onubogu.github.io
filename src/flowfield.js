@@ -147,11 +147,11 @@ function select_default_color(i)
 	if (i % 5 == 0)
 		return (color(random(100, 255), random(100, 200), random(100, 255)));
 	else if (i % 3 == 0)
-		return (color(random(100, 255), random(100, 200), random(100, 255)));
+		return (color3);
 	else if (i % 2 == 0)
-		return (color(random(100, 255), random(100, 200), random(100, 255)));
+		return (color2);
 	else
-		return (color(random(100, 255), random(100, 200), random(100, 255)));
+		return (color5);
 }
 // increases stroke weight
 function get_stroke_weight()
