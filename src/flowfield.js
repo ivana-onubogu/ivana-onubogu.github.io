@@ -237,7 +237,8 @@ function keyPressed()
 	}
 	else if (key == 'b' || key == 'B') 
 	{
-	//   do something
+		glitches(10);
+		slowDown(1);
 	}
 	else if (key == 'n' || key == 'N') 
 	{
@@ -247,8 +248,9 @@ function keyPressed()
 	{
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
-		x_pressed = true;
+		m_pressed = true;
 		slowDown(90);
+		strokeGrow(25);
 	}
 	else if (key == 'a' || key == 'A') 
 	{
@@ -425,7 +427,6 @@ function strokeGrow(number)
 	{
 		revertW();
 		revertE();
-		revertZ();
 	}
 }
 
