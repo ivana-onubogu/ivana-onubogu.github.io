@@ -132,6 +132,10 @@ function get_stroke_color(i)
 	}
 	else if (h_pressed)
 		stroke(color1);
+	else if (a_pressed)
+		stroke(color(random(0,255), random(0,255), random(0,255)));
+	else if (c_pressed)
+		stroke(color 5);
 	else if (j_pressed)
 		stroke(color2);
 	else if (k_pressed)
@@ -254,11 +258,12 @@ function keyPressed()
 	}
 	else if (key == 'a' || key == 'A') 
 	{
-		background(color(0, 0, 0));
+		background(color(0, 115, 34));
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
 		x_pressed = true;
 		slowDown(100);
+		strokeWeightDefault++;
 	}
 	else if (key == 's' || key == 'S') 
 	{
