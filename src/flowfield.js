@@ -215,7 +215,7 @@ function particle_is_on_screen(particle)
 // VISUAL EFFECTS TRIGGERED BY KEY PRESSES
 function keyPressed() 
 {
-	if (key == 'z' || key == 'Z') 
+	if (key == 'z' || key == 'Z' && !z_pressed)
 	{
 		z_pressed = true;
 		strokeGrow(90);
@@ -225,11 +225,11 @@ function keyPressed()
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
 		x_pressed = true;
-		slowDown(41);
+		slowDown(90);
 	}
 	else if (key == 'c' || key == 'C') 
 	{
-	//   do something
+		glitches(15);
 	}
 	else if (key == 'v' || key == 'V') 
 	{
@@ -362,7 +362,7 @@ function glitches(number)
 {
 	if (number > 0)
 	{
-		noiseSeed(random(0, 10));
+		noiseSeed(random(0, 30));
 		setTimeout(() => glitches(number - 1), 30);
 	}
 }
