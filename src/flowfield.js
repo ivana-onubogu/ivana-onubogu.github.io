@@ -8,7 +8,7 @@ let		noiseScaleEffect = 0.0009;
 let 	direction;
 let		directionEffect = 4;
 let		speed;
-let		speedDefault = 1.2;
+let		speedDefault = 1.1;
 let		speedEffect = 2;
 let		strokeWeightDefault = 1;
 let		strokeWeightEffect = 1;
