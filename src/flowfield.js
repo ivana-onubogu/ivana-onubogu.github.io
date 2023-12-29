@@ -233,12 +233,12 @@ function keyPressed()
 	}
 	else if (key == 'v' || key == 'V') 
 	{
-	//   do something
+	   	strokeWeightDefault--;
 	}
 	else if (key == 'b' || key == 'B') 
 	{
 		glitches(-60);
-	
+		strokeWeightDefault++
 	}
 	else if (key == 'n' || key == 'N') 
 	{
