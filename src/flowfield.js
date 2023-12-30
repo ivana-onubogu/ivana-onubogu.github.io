@@ -81,6 +81,10 @@ function draw()
 
 var video = document.getElementById("test-yt"); 
 
+video.addEventListener('loadedmetadata', function() {
+	video.width = 0.33 * (canvas.width); 
+	video.height = 0.33 * (canvas.height); 
+  });
 if (n_pressed) {
 	video.addEventListener('play', function() {
 		var $this = this; //cache
