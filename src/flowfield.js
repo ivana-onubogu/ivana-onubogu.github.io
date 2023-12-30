@@ -261,8 +261,8 @@ function keyPressed()
 	{
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
-		a_pressed = true;
-		strokeWeightDefault*2;
+		x_pressed = true;
+		strokeWeightDefault++;
 	}
 	else if (key == 's' || key == 'S') 
 	{
