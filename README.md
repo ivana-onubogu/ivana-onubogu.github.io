@@ -5,7 +5,7 @@
 
 # About the project
 <br>
-A project I am currently working on that builds on the work developed as a part of the CFG web development track. This is a work in progress.
+A project that builds off of Felicia Koolhoven's original work linked here (https://github.com/fkoolhoven/fkoolhoven.github.io). I am currently working on the 'aperture effect.' This is a work in progress.
 
 <img src="img/screenshot1.png" alt="img disappeared" width="1000" height="auto" />
 <img src="img/screenshot2.png" alt="img disappeared" width="1000" height="auto" />
