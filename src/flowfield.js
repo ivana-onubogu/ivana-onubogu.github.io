@@ -426,10 +426,6 @@ function strokeGrow(number)
 		strokeWeightEffect -= 0.20;
 		setTimeout(() => strokeGrow(number - 0.2), 60);
 	}
-	else if (number > 0 && z_pressed){
-		strokeWeightEffect -= 0.3;
-		setTimeout(() => strokeGrow(number - 1), 30);
-	}
 	else if (number <= 0)
 	{
 		revertW();
