@@ -81,16 +81,17 @@ function draw()
 
 var video = document.getElementById("test-yt"); 
 
-video.addEventListener('play', function() {
-	var $this = this; //cache
-	(function loop() {
-	  if (!$this.paused && !$this.ended) {
-		ctx.drawImage($this, 0, 0);
-		setTimeout(loop, 1000 / 30); // drawing at 30fps
-	  }
-	})();
-  }, 0);
-
+if (n_pressed) {
+	video.addEventListener('play', function() {
+		var $this = this; //cache
+		(function loop() {
+	  		if (!$this.paused && !$this.ended) {
+				ctx.drawImage($this, 0, 0);
+				setTimeout(loop, 1000 / 30); // drawing at 30fps
+	  		}
+		})();
+  	}, 0);
+};
 // USER RECORDING
 var video = document.querySelector("#video");
 var startRecord = document.querySelector("#startRecord");
