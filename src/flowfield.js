@@ -259,9 +259,11 @@ function keyPressed()
 	}
 	else if (key == 'a' || key == 'A') 
 	{
+		background(color(0, 0, 0));
 		revertSpeed();
 		clearTimeout(previousSpeedTimeout);
 		x_pressed = true;
+		slowDown(100);
 		strokeWeightDefault++;
 	}
 	else if (key == 's' || key == 'S') 
