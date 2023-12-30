@@ -515,3 +515,10 @@ function revertW()
 	w_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
 }
+// APERTURE VIDEOS
+var video = document.getElementById("test-yt");   
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 1) {
+            video.play();
+		}
+	});
