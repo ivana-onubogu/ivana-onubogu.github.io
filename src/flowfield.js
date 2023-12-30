@@ -78,24 +78,7 @@ function draw()
 	}
 }
 // APERTURE VIDEOS
-
-var video = document.getElementById("test-yt"); 
-
-video.addEventListener('loadedmetadata', function() {
-	video.width = 0.33 * (canvas.width); 
-	video.height = 0.33 * (canvas.height); 
-  });
-if (n_pressed) {
-	video.addEventListener('play', function() {
-		var $this = this; //cache
-		(function loop() {
-	  		if (!$this.paused && !$this.ended) {
-				ctx.drawImage($this, 0, 0);
-				setTimeout(loop, 1000 / 30); // drawing at 30fps
-	  		}
-		})();
-  	}, 0);
-};
+//code them like the button you had for a minute (for the recording option(make them real small and more transparent, and at select coordinates on the screen) or make them slowly move across the screen, like in the khan academy JS tutorial)
 // USER RECORDING
 var video = document.querySelector("#video");
 var startRecord = document.querySelector("#startRecord");
