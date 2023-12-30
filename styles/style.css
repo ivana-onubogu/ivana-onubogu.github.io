@@ -31,6 +31,8 @@ button:hover{
     left: 10px;
 }
 #video-container{
+	position: absolute;
+	bottom: 5px;
 	background-color: transparent;
 }
 #menu-button:hover{
