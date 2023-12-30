@@ -77,6 +77,20 @@ function draw()
 		}
 	}
 }
+// APERTURE VIDEOS
+
+var video = document.getElementById("test-yt"); 
+
+video.addEventListener('play', function() {
+	var $this = this; //cache
+	(function loop() {
+	  if (!$this.paused && !$this.ended) {
+		ctx.drawImage($this, 0, 0);
+		setTimeout(loop, 1000 / 30); // drawing at 30fps
+	  }
+	})();
+  }, 0);
+
 // USER RECORDING
 var video = document.querySelector("#video");
 var startRecord = document.querySelector("#startRecord");
@@ -515,10 +529,3 @@ function revertW()
 	w_pressed = false;
 	strokeWeightEffect = strokeWeightDefault;
 }
-// APERTURE VIDEOS
-var video = document.getElementById("test-yt");   
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 1) {
-            video.play();
-		}
-	});
