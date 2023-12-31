@@ -102,18 +102,6 @@ input:hover {
 		  clip-path: var(--clip-path-hover);
 		}
 }
-text::before {
-			--r: 25px;
-			--opacity: 1;
-		  }
-text::after {
-	clip-path: var(--clip-path-hover);
-	}
- > span {
-			&::after {
-			  clip-path: var(--clip-path-hover);
-			}
-		  }
 input:checked {
 		width: 100%;
 		height: 100%;
@@ -121,20 +109,8 @@ input:checked {
 		.aperture-video {
 		  clip-path: var(--clip-path-clicked);
 		}
-		.text {
-		  --opacity: 0;
-		  transition: opacity .3s var(--timing-function);
-		  &::after {
-			clip-path: var(--clip-path-clicked);
-		  }
-		  > span {
-			&::after {
-			  clip-path: var(--clip-path-clicked);
-			}
-		  }
-		}
 	  }
-	}
+}
   
 
 /*USER VIDEO */	
