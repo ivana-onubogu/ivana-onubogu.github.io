@@ -51,7 +51,7 @@ button:hover{
 }
 
 /*APERTURE VIDEOS*/
-.wrapper {
+#wrapper {
 	--color: #1F242D;
 	--color-invert: #ffffff;
 	--clip-path: circle(15px at left);
@@ -59,7 +59,9 @@ button:hover{
 	--clip-path-clicked: circle(100vw at left);
 	--duration: .4s;
 	--timing-function: ease;
-	position: relative;
+	position: absolute;
+	bottom: 125px;
+	right: 220px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -96,9 +98,9 @@ input {
 	z-index: 2;
 	appearance: none;
 	cursor: pointer;
-
+}
 input:hover {
-		.aperture-video {
+	.aperture-video {
 		  clip-path: var(--clip-path-hover);
 		}
 }
@@ -109,26 +111,6 @@ input:checked {
 		.aperture-video {
 		  clip-path: var(--clip-path-clicked);
 		}
-	  }
-}
-  
-
-/*USER VIDEO */	
-/*#startRecord, #stopRecord{
-	background-color: rgb(248, 51, 60);
-	position: fixed;
-	top: 30px;
-	right: 20px;
-	text: black;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 12px;
-	font-size: 0.3em;
-}
-
-#startRecord:hover, #stopRecord:hover {
-	background-color: rgb(188, 251, 61);
-	padding: 2px;
 }
 /* OFF-CANVAS MENU */
 #Menu{
