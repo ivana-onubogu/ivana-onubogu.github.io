@@ -51,8 +51,8 @@ button:hover{
 }
 
 /*APERTURE VIDEOS*/
-#wrapper {
-	border-radius: 50%;
+#aperture-video {
+	background-color: transparent;
 	position: absolute;
 	bottom: 100px;
 	right: 130px;
