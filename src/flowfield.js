@@ -79,38 +79,7 @@ function draw()
 }
 // APERTURE VIDEOS
 //code them like the button you had for a minute (for the recording option(make them real small and more transparent, and at select coordinates on the screen) or make them slowly move across the screen, like in the khan academy JS tutorial)
-var wrapper = document.querySelector("#wrapper")
-var apertureVideo = document.querySelector("#aperture-video")
-tl = new TimelineLite({
-	paused: true
-});
 
-TweenMax.set(wrapper, {
-x: 250,
-y: 100
-})
-
-// Controlling Timeline Playback
-tl
-.to(apertureVideo, 0.2, {
-width: '100vw',
-height: '100vh',
-x: 0,
-y: 0,
-autoRound: false,
-transformOrigin: "50% 50%"
-})
-
-.progress(1).progress(0);
-
-apertureVideo.on('click', function() {
-$(this).addClass('active');
-tl.play();
-});
-wrapper.on('click', function() {
-tl.reverse();
-apertureVideo.removeClass('active');
-});
 // USER RECORDING
 var video = document.querySelector("#video");
 var startRecord = document.querySelector("#startRecord");

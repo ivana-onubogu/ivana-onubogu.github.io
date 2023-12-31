@@ -52,15 +52,12 @@ button:hover{
 
 /*APERTURE VIDEOS*/
 #wrapper {
-	color:white;
 	border-radius: 50%;
-	position: fixed;
-	cursor: pointer;
-	bottom: 125px;
-	right: 220px;
-	width: 100%;
+	position: absolute;
+	bottom: 100px;
+	right: 130px;
 }
-#aperture-video {
+/*#aperture-video {
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
