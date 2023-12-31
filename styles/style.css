@@ -52,65 +52,27 @@ button:hover{
 
 /*APERTURE VIDEOS*/
 #wrapper {
-	--color:white;
-	--color-invert: rgb(188, 251, 61);
-	--clip-path: circle(15px at left);
-	--clip-path-hover: circle(70px at left);
-	--clip-path-clicked: circle(100vw at left);
-	--duration: .4s;
-	--timing-function: ease;
+	color:white;
+	border-radius: 50%;
 	position: fixed;
+	cursor: pointer;
 	bottom: 125px;
 	right: 220px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 }
-.aperture-video {
+#aperture-video {
 	height: 100vh;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: 15px;
-	clip-path: var(--clip-path);
-	transition: clip-path var(--duration) var(--timing-function);
 	position: fixed;
-	background: #c4cbde;
 	top: 50%;
 	left: 50%;
 	min-width: 100%;
 	min-height: 100%;
 	width: auto;
 	height: auto;
-	transform: translate(-50%, -50%);
-}
-input {
-	width: 220px;
-	height: 40px;
-	margin: auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	border-radius: 40px;
-	outline: none; 
-	z-index: 2;
-	appearance: none;
-	cursor: pointer;
-}
-input:hover {
-	.aperture-video {
-		  clip-path: var(--clip-path-hover);
-		}
-}
-input:checked {
-		width: 100%;
-		height: 100%;
-		border-radius: 0;
-		.aperture-video {
-		  clip-path: var(--clip-path-clicked);
-		}
 }
 /* OFF-CANVAS MENU */
 #Menu{
