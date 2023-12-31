@@ -52,14 +52,14 @@ button:hover{
 
 /*APERTURE VIDEOS*/
 #wrapper {
-	--color: #1F242D;
-	--color-invert: #ffffff;
+	--color:white;
+	--color-invert: rgb(188, 251, 61);
 	--clip-path: circle(15px at left);
 	--clip-path-hover: circle(70px at left);
 	--clip-path-clicked: circle(100vw at left);
 	--duration: .4s;
 	--timing-function: ease;
-	position: absolute;
+	position: fixed;
 	bottom: 125px;
 	right: 220px;
 	display: flex;
