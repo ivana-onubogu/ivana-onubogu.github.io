@@ -38,7 +38,7 @@ let 	previousSpeedTimeout;
 let		previousStrokeTimeout
 let 	effectDuration = 3000;
 
-// INITIAL CANVAS SETUP
+/*// INITIAL CANVAS SETUP
 function setup()
 {
 	const canvas = createCanvas(window.innerWidth, window.innerHeight);
@@ -76,7 +76,7 @@ function draw()
 			particle.y = random(height);
 		}
 	}
-}
+}*/
 // APERTURE VIDEOS
 //code them like the button you had for a minute (for the recording option(make them real small and more transparent, and at select coordinates on the screen) or make them slowly move across the screen, like in the khan academy JS tutorial)
 // USER RECORDING
