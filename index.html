@@ -11,19 +11,30 @@
 </head>
 
 <body>
-	
+	<!--canvas-->
 	<div id="canvas_location"></div>
-
+	<!--general buttons-->
 	<button id="menu-button" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#Menu" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-	
+	<!--aperture video(s)-->
+	<div class="wrapper">
+		<input type="checkbox">
+		<div class="aperture-video">
+		  <video src="https://www.robmillsarchitects.com/files/land/city/RMA_Web_land_city_1.mp4" loop muted autoplay playsinline></video>
+		</div>
+		<div class="text">
+		  <span data-text="Watch the video"></span>
+		</div>
+	  </div>
+	  <!--user webcam-->
 	<div id="video-container"><center><video id="video" width="150" height="120" autoplay></video> 
 		<br><br>
     <button id="startRecord">Start Recording</button>
 		<button id="stopRecord">Stop Recording </button>
 		<a id="downloadLink" download="video.mp4">Download Video</a></center>
 	</div>
+	<!--off-canvas menu-->
 	<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="Menu" aria-labelledby="MenuLabel">
 	  	<div class="offcanvas-body d-flex flex-column">
 			<div class="text-center">
