@@ -51,12 +51,7 @@ button:hover{
 }
 
 /*APERTURE VIDEOS*/
-#aperture-video {
-	background-color: transparent;
-	position: absolute;
-	bottom: 100px;
-	right: 130px;
-}
+
 /*#aperture-video {
 	height: 100vh;
 	overflow: hidden;
