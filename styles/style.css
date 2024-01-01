@@ -49,7 +49,11 @@ button:hover{
 .contact-button{
 	width: 220px;
 }
-
+#submit-here{
+	width: 400px;
+	font-size: large;
+	text-align: center;
+}
 /*APERTURE VIDEOS*/
 
 /*#aperture-video {
