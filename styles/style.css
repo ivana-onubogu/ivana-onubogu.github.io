@@ -78,8 +78,8 @@ button:hover{
 .losing{
 	background-color: transparent;
 	position: absolute;
-	top: 162px;
-	right: 372px;
+	top: 202px;
+	right: 422px;
 	border-radius: 50%;
 	transform: scale(0.5, 0.5);
 	background-color:rgb(188, 251, 61);
@@ -129,7 +129,7 @@ button:hover{
 	background-color: transparent;
 	position: absolute;
 	top: 382px;
-	left: 404px;
+	left: 333px;
 	border-radius: 50%;
 	transform: scale(0.5, 0.5);
 	background-color:rgb(188, 251, 61);
