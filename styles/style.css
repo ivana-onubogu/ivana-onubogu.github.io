@@ -55,11 +55,11 @@ button:hover{
 	text-align: center;
 }
 /*APERTURE VIDEOS*/
-#aperture-video{
+.sundance{
 	background-color: transparent;
 	position: absolute;
-}
-.sundance{
+	top: 225;
+	right: 55;
 	border-radius: 50%;
 	background-color:rgb(188, 251, 61);
 }
