@@ -55,7 +55,7 @@ button:hover{
 	text-align: center;
 }
 /*APERTURE VIDEOS*/
-.sundance, .yonkers, .losing, .houstons, .joni, .prude, .shikeith, .rebirth, .bailey {
+.sundance {
 	background-color: transparent;
 	position: absolute;
 	top: 50px;
