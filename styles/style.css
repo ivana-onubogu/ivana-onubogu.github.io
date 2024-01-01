@@ -119,3 +119,10 @@ button:hover{
 	padding-bottom: 25px;
 	width: 450px;
 }
+
+/*SUBMISSIONS PAGE */
+#submissions-body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
