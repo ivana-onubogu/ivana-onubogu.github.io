@@ -58,8 +58,88 @@ button:hover{
 .sundance, .yonkers, .losing, .houstons, .joni, .prude, .shikeith, .rebirth, .bailey {
 	background-color: transparent;
 	position: absolute;
-	top: random(50px, 450px);
-	right: random(50px, 450px);
+	top: 50px;
+	right: 125px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.yonkers{
+	background-color: transparent;
+	position: absolute;
+	bottom: 50px;
+	left: 125px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.losing{
+	background-color: transparent;
+	position: absolute;
+	top: 162px;
+	right: 372px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.houstons{
+	background-color: transparent;
+	position: absolute;
+	bottom: 231px;
+	right: 378px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.joni{
+	background-color: transparent;
+	position: absolute;
+	bottom: 16px;
+	right: 81px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.prude{
+	background-color: transparent;
+	position: absolute;
+	top: 134px;
+	right: 234px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.shikeith{
+	background-color: transparent;
+	position: absolute;
+	bottom: 469px;
+	left: 256px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.rebirth{
+	background-color: transparent;
+	position: absolute;
+	top: 382px;
+	left: 293px;
+	border-radius: 50%;
+	transform: scale(0.5, 0.5);
+	background-color:rgb(188, 251, 61);
+	opacity: 0.20;
+}
+.bailey{
+	background-color: transparent;
+	position: absolute;
+	bottom: 117px;
+	right: 444px;
 	border-radius: 50%;
 	transform: scale(0.5, 0.5);
 	background-color:rgb(188, 251, 61);
