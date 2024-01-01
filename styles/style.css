@@ -57,13 +57,11 @@ button:hover{
 /*APERTURE VIDEOS*/
 #aperture-video{
 	background-color: transparent;
+	position: absolute;
 }
 .sundance{
 	border-radius: 50%;
 	background-color:rgb(188, 251, 61);
-	position: absolute;
-	top: 300;
-	left: 225;
 }
 /*#aperture-video {
 	height: 100vh;
