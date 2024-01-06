@@ -205,9 +205,8 @@ button:hover{
 
 /*SUBMISSIONS PAGE */
 #submission-form{
-	position: fixed;
-	left: 50%;
-	top: 50%;
+	display: flex;
+    justify-content: center;
 	font-size: large;
 	text-align: center;
 }
