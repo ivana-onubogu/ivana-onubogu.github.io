@@ -204,13 +204,7 @@ button:hover{
 }
 
 /*SUBMISSIONS PAGE */
-#contact-button{
-	width: 400px;
-	font-size: large;
-	text-align: center;
-}
-#submissions.contact-button{
-	width: 400px;
+#submission-form{
 	font-size: large;
 	text-align: center;
 }
