@@ -49,6 +49,11 @@ button:hover{
 .contact-button{
 	width: 220px;
 }
+#contact-button{
+	width: 400px;
+	font-size: large;
+	text-align: center;
+}
 #submit-here{
 	width: 400px;
 	font-size: large;
