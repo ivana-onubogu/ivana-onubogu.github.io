@@ -205,6 +205,7 @@ button:hover{
 
 /*SUBMISSIONS PAGE */
 #submission-form{
+	padding-top: 200px;
 	display: flex;
     justify-content: center;
 	font-size: large;
