@@ -49,11 +49,7 @@ button:hover{
 .contact-button{
 	width: 220px;
 }
-#contact-button{
-	width: 400px;
-	font-size: large;
-	text-align: center;
-}
+
 #submit-here{
 	width: 400px;
 	font-size: large;
@@ -208,8 +204,13 @@ button:hover{
 }
 
 /*SUBMISSIONS PAGE */
-#submissions-body{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#contact-button{
+	width: 400px;
+	font-size: large;
+	text-align: center;
+}
+#submissions.contact-button{
+	width: 400px;
+	font-size: large;
+	text-align: center;
 }
